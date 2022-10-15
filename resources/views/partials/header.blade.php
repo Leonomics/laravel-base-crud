@@ -7,10 +7,16 @@
         </a>
       </li>
       <li>
-        <a href="{{ route('departments.index') }}">
-          Dipartimenti
+        <a href="{{ route('comics.index') }}">
+          Comics
         </a>
       </li>
     </ul>
   </nav>
 </header>
+
+<style>
+  li{
+    list-style: none;
+  }
+</style>
