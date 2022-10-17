@@ -3,6 +3,12 @@
 
 @section('content')
 
+<section>
+    <div class="container" style="display: flex; justify-content: flex-start;">
+      <a href="{{ route('comics.create') }}">Aggiungi fumetto</a>
+    </div>
+  </section>
+
 <table>
     <thead>
         <tr>
@@ -27,6 +33,17 @@
                 <td>{{$comic->series}}</td>
                 <td>{{$comic->sale_date}}</td>
                 <td>{{$comic->type}}</td>
+                <td>
+                    <a href="{{ route('comics.edit',$comic) }}">edit</a>
+                  </td>
+                  <td>
+                    <form action="{{ route('comics.destroy',$comic) }}" method="POST">
+                      @csrf
+                      @method('DELETE')
+
+                      <input type="submit" value="Elimina">
+                    </form>
+                  </td>
             </tr>
         @endforeach
     </tbody>

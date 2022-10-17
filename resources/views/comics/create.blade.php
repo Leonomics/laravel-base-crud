@@ -14,31 +14,52 @@
             @csrf
             <p>
                 <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Titolo">
+                <input type="text" name="title" value="{{ old('title') }}" id="title" placeholder="Titolo">
+                @error('title')
+                    <div style="color: red; font-size: 12px;" class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </p>
             <p>
-                <label for="title">Description</label>
-                <input type="text" name="description" id="description" placeholder="Description">
+                <label for="description">Description</label>
+                <input type="text" name="description" value="{{ old('description') }}" id="description" placeholder="Description">
+                @error('description')
+                    <div style="color: red; font-size: 12px;" class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </p>
             <p>
-                <label for="title">Thumb</label>
-                <input type="text" name="thumb" id="thumb" placeholder="Thumb">
+                <label for="thumb">Thumb</label>
+                <input type="text" name="thumb" value="{{ old('thumb') }}" id="thumb" placeholder="Thumb">
+                @error('thumb')
+                    <div style="color: red; font-size: 12px;" class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </p>
             <p>
-                <label for="title">Price</label>
-                <input type="text" name="price" id="price" placeholder="Price">
+                <label for="price">Price</label>
+                <input type="text" name="price" value="{{ old('price') }}" id="price" placeholder="Price">
+                @error('price')
+                    <div style="color: red; font-size: 12px;" class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </p>
             <p>
-                <label for="title">Series</label>
-                <input type="text" name="series" id="series" placeholder="Series">
+                <label for="series">Series</label>
+                <input type="text" name="series" value="{{ old('series') }}" id="series" placeholder="Series">
+                @error('series')
+                    <div style="color: red; font-size: 12px;" class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </p>
             <p>
-                <label for="title">Sale Date</label>
-                <input type="text" name="sale_date" id="sale_date" placeholder="Sale Date">
+                <label for="sale_date">Sale Date</label>
+                <input type="text" name="sale_date" value="{{ old('sale_date') }}" id="sale_date" placeholder="Sale Date">
+                @error('sale_date')
+                    <div style="color: red; font-size: 12px;" class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </p>
             <p>
-                <label for="title">Type</label>
-                <input type="text" name="type" id="type" placeholder="Type">
+                <label for="type">Type</label>
+                <input type="text" name="type" value="{{ old('type') }}" id="type" placeholder="Type">
+                @error('type')
+                    <div style="color: red; font-size: 12px;" class="alert alert-danger">{{ $message }}</div>
+                @enderror
             </p>
 
             <p>
